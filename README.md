@@ -1,4 +1,6 @@
 # Dell-7559-Hackintosh
+## follow the origin guide:
+  >>https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
   
   ![Sieera](https://github.com/crackself/Dell-7559-Hackintosh/blob/master/introduce/sierra.png)
   

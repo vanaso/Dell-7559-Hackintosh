@@ -22,4 +22,7 @@
   ![Sieera](https://github.com/crackself/Dell-7559-Hackintosh/blob/master/introduce/EFI.png)
   ![Sieera](https://github.com/crackself/Dell-7559-Hackintosh/blob/master/introduce/LE.png)
 
+# How to patch DSDT SSDTs for Dell 7559 i5 6300
+>>https://github.com/crackself/Dell-7559-Hackintosh/blob/master/introduce/Dell%207559%20DSDT:SSDT%20%E8%A1%A5%E4%B8%81%E6%95%99%E7%A8%8B.pdf
+
 ### IF YOU GET PROBLEM IN YOU HACKINTOSH,IT CAN GET HELP FROM THE FOURM!

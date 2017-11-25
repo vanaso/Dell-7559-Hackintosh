@@ -1,6 +1,7 @@
-# Dell-7559-Hackintosh
+# Dell 7559 Hackintosh
 # Be sure you read Readme in every folder befor you install the kext
-# Something updated is different from 10.12.5!!!
+# Move into Hot_Patch methon,Update and fix Bluetootch,10.13.1 right now!
+## Something updated is different from 10.12.5!!!
 ## follow the origin guide(from www.tonymacx86.com):
   >>https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
   

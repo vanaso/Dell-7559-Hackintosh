@@ -1,22 +1,99 @@
-# Hackintosh on Dell 7559
-### ![fundation](https://github.com/crackself/Dell-7559-Hackintosh/blob/master/introduce/toolbar.png)
-## 2018-1-25 Important update:
-    moving into full hotpatch support!
-    THE HOT-PATCH FILES MAKE FOR OS 10.12.5(AND NEWER)、10.13.1(AND NEWER)
-    For Intel 6th CPU(or newer) there's don't need ssdt-cpu.aml for native cpu power manage，it have be set to enable and work by config in config.plist
-    Never enable DSDT.aml (patched file) with hotpatch setting together!!!
-  ### Something updated is different from 10.12.5. so don't use new file for older version OS
+This is a Full guide for install MacOSX on Dell 7559 Laptop
+In this guide, all operation take my Dell 7559 as exmaple, APCI files(SSDT and APCI fixed in clover may not compatible with your hardware, be careful to using them, repatch in need).
+  CPU: i5-6300HQ (Skylake,6th)      Mem:  4G DDR3, in one slot
+  Graphic: Intel HD Graph 530 + Nvida GTX960M
+  Display: 1920x1080 FHD screen     Disk: 128G SSD + 500G HDD
 
-## The origin guide (from www.tonymacx86.com):
-  >>https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
-  
-  For Dell 7559 i7
-  ### https://www.tonymacx86.com/threads/guide-dell-inspiron-15-7559-el-capitan-hackintosh-dual-boot-with-windows.196138/
-  ### https://www.tonymacx86.com/threads/guide-dell-inspiron-15-7559-sierra-install-10-12-4-nvidia.201576/
-  
-  For Dell 7559 i5
-  ###  >>https://www.tonymacx86.com/threads/dell-7559-i5-6300hq-el-capitan-sierra-installed-success.210276/
+Before install：
+There's something must noticed:
+  A. The i7 edition is easy to make Hackintosh
+  B. The i5 editon is hard to boot frome UEFI Clover
+There's Something you must have and keep for long time on you Hackintosh way
+  A. noun
+  B. patience
+  C. time
+  D. learning skill
 
-## A simple guide about patch DSDT SSDTs for Dell 7559 i5 6300
-### https://github.com/crackself/Dell-7559-Hackintosh/blob/master/introduce/Dell%207559%20DSDT:SSDT%20%E8%A1%A5%E4%B8%81%E6%95%99%E7%A8%8B.pdf
+Prepare:
+Understand your hareware:
+  Have a look into Laptop Guide from manufacturer
+  Check hardware on the normal running Operation Systme（Windows/linux，etc.）
+  List and record hardware details
+  Get an working Mac OSX and download installer image from Mac app stroe
 
+Create bootable USB installer with Clover(follow this thread:https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/)
+In this chapters, required an working Mac OSX with network
+
+Download Mac OSX installer, Download Clover installer
+
+Ensure and format usb disk into GPT disk, operate in terminal:
+crackselfs-MBP:~ crackself$ diskutil list
+/dev/disk0 (internal, physical):
+ #:                       TYPE NAME                    SIZE       IDENTIFIER
+ 0:      GUID_partition_scheme                        *128.0 GB   disk0
+ 1:                        EFI EFI                     209.7 MB   disk0s1
+ 2:         Microsoft Reserved                         16.8 MB    disk0s2
+ 3:       Microsoft Basic Data Windows                 63.8 GB    disk0s3
+ 4:                  Apple_HFS Mac                     63.3 GB    disk0s4
+ 5:                 Apple_Boot Recovery HD             650.0 MB   disk0s5
+...
+/dev/disk2 (external, physical):
+ #:                       TYPE NAME                    SIZE       IDENTIFIER
+ 0:      GUID_partition_scheme                        *15.6 GB    disk2
+ 1:                        EFI EFI                     209.7 MB   disk2s1
+ 2:       Microsoft Basic Data                         15.2 GB    disk2s2
+
+as the result, /dev/disk2 is the usb disk.
+format it as one GPT partiton whit EFI partiton:
+diskutil partitionDisk /dev/disk2 1 GPT HFS+J "install_osx" R
+
+then, write installer inamge into usbdisk
+For Hight Sierra(10.13.x):
+sudo "/Applications/Install macOS High Sierra.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --nointeraction
+For Sierra(10.12.x)
+sudo "/Applications/Install macOS Sierra.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --applicationpath "/Applications/Install macOS Sierra.app" --nointeraction
+For El Capitan(10.11.x)
+sudo "/Applications/Install OS X El Capitan.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --applicationpath "/Applications/Install OS X El Capitan.app" --nointeraction
+After finish, rename usb disk as install_osx
+Noticed: Dell 7559 with Skylake cpu, OS support from 10.11
+
+Install Clover into usb EFI partition:
+here suggest using origin installer(https://sourceforge.net/projects/cloverefiboot/)
+
+For UEFI boot:
+check all this:
+  Only install UEFI
+  Theme
+    BGM
+  install in EFI partition
+  Drivers64UEFI
+      AptioMemoryFix
+
+For UEFI and legacy clover boot:
+  install in EFI partition
+  Theme
+    BGM
+  Bootloader
+    Bios boot0af
+  CloverEFI
+    CloverEFI 64bit BiosBlockIO
+  Drivers64UEFI
+    AptioMemoryFix
+
+Noticed: as UEFI/legacy clover Boot model suggeste for i5 EDITON.
+After install fiish, replace universal config.plist files frome RehabMan; place must kexts into Clover/Kext/Ohters
+
+Postinstall:
+One step need to explain:
+install clover into SSD HDD EFI partiton as well as operate on installer,but check install RCscripts in target partiton, This afect store your backlight leverl.
+
+Others:
+Using my Clover files to test, if your hardware do not work perfect, Repatch your APCI files and check kexts, in additon, RehabMan suggest Kest install into L/E, rebuild kextcache wiht comandline "sudo kextcache -i /".
+
+Get hardware work normally:
+Graphic
+Audio:
+Wi-Fi card
+Ethernet
+Keyboard and mouse
+Power Manager(Sleep and wake )

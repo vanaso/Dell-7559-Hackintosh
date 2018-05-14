@@ -1,32 +1,32 @@
-This is a Full guide for install MacOSX on Dell 7559 Laptop
-In this guide, all operation take my Dell 7559 as exmaple, APCI files(SSDT and APCI fixed in clover may not compatible with your hardware, be careful to using them, repatch in need).
-  CPU: i5-6300HQ (Skylake,6th)      Mem:  4G DDR3, in one slot
-  Graphic: Intel HD Graph 530 + Nvida GTX960M
-  Display: 1920x1080 FHD screen     Disk: 128G SSD + 500G HDD
+# This is a Full guide for install MacOSX on Dell 7559 Laptop
+## In this guide, all operation take my Dell 7559 as exmaple, APCI files(SSDT and APCI fixed in clover may not compatible with your hardware, be careful to using them, repatch in need).
+  1. CPU: i5-6300HQ (Skylake,6th)      Mem:  4G DDR3, in one slot
+  2. Graphic: Intel HD Graph 530 + Nvida GTX960M
+  3. Display: 1920x1080 FHD screen     Disk: 128G SSD + 500G HDD
 
-Before install：
-There's something must noticed:
-  A. The i7 edition is easy to make Hackintosh
-  B. The i5 editon is hard to boot frome UEFI Clover
-There's Something you must have and keep for long time on you Hackintosh way
-  A. noun
-  B. patience
-  C. time
-  D. learning skill
+## Before install：
+## 1. There's something must noticed:
+###  A. The i7 edition is easy to make Hackintosh
+###  B. The i5 editon is hard to boot frome UEFI Clover
+## 2. There's Something you must have and keep for long time on you Hackintosh way
+###  A. noun
+###  B. patience
+###  C. time
+###  D. learning skill
 
-Prepare:
-Understand your hareware:
+## Prepare:
+### Understand your hareware:
   Have a look into Laptop Guide from manufacturer
   Check hardware on the normal running Operation Systme（Windows/linux，etc.）
   List and record hardware details
   Get an working Mac OSX and download installer image from Mac app stroe
 
-Create bootable USB installer with Clover(follow this thread:https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/)
+## Create bootable USB installer with Clover(follow this thread:https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/)
 In this chapters, required an working Mac OSX with network
 
-Download Mac OSX installer, Download Clover installer
+## Download Mac OSX installer, Download Clover installer
 
-Ensure and format usb disk into GPT disk, operate in terminal:
+### Ensure and format usb disk into GPT disk, operate in terminal:
 crackselfs-MBP:~ crackself$ diskutil list
 /dev/disk0 (internal, physical):
  #:                       TYPE NAME                    SIZE       IDENTIFIER
@@ -44,7 +44,7 @@ crackselfs-MBP:~ crackself$ diskutil list
  2:       Microsoft Basic Data                         15.2 GB    disk2s2
 
 as the result, /dev/disk2 is the usb disk.
-format it as one GPT partiton whit EFI partiton:
+Format it as one GPT partiton whit EFI partiton:
 diskutil partitionDisk /dev/disk2 1 GPT HFS+J "install_osx" R
 
 then, write installer inamge into usbdisk
@@ -57,7 +57,7 @@ sudo "/Applications/Install OS X El Capitan.app/Contents/Resources/createinstall
 After finish, rename usb disk as install_osx
 Noticed: Dell 7559 with Skylake cpu, OS support from 10.11
 
-Install Clover into usb EFI partition:
+## Install Clover into usb EFI partition:
 here suggest using origin installer(https://sourceforge.net/projects/cloverefiboot/)
 
 For UEFI boot:

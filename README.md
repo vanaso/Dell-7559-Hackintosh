@@ -45,11 +45,11 @@ diskutil partitionDisk /dev/disk2 1 GPT HFS+J "install_osx" R
 
 then, write installer inamge into usbdisk<br>
 ###### For Hight Sierra(10.13.x):<br>
-sudo "/Applications/Install macOS High Sierra.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --nointeraction<br>
+#### sudo "/Applications/Install macOS High Sierra.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --nointeraction<br>
 ###### For Sierra(10.12.x):<br>
-sudo "/Applications/Install macOS Sierra.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --applicationpath "/Applications/Install macOS Sierra.app" --nointeraction<br>
+#### sudo "/Applications/Install macOS Sierra.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --applicationpath "/Applications/Install macOS Sierra.app" --nointeraction<br>
 ###### For El Capitan(10.11.x):<br>
-sudo "/Applications/Install OS X El Capitan.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --applicationpath "/Applications/Install OS X El Capitan.app" --nointeraction<br>
+#### sudo "/Applications/Install OS X El Capitan.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --applicationpath "/Applications/Install OS X El Capitan.app" --nointeraction<br>
 
 After finish, rename usb disk as 'install_osx'<br>
 ##### Noticed: Dell 7559 with Skylake cpu, OS support from 10.11

@@ -67,7 +67,8 @@ Here suggest using [origin installer](https://sourceforge.net/projects/cloverefi
        AptioMemoryFix<br>
 
 ##### For UEFI and legacy clover boot:<br>
-    Install in EFI partition<br>
+###### check all this:<br>
+    Install in EFI partition<br>
     Theme<br>
       BGM<br>
     Bootloader<br>

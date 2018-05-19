@@ -1,11 +1,10 @@
 This is a guide for install MacOSX on Dell 7559 Laptop
 =
-In this guide, all operation take my Dell 7559 as exmaple, APCI files(SSDT and APCI fixed in clover may not compatible with your hardware, be careful to using them, repatch in need).
- --- 
+##### In this guide, all operation take my Dell 7559 as exmaple, APCI files(SSDT and APCI fixed in clover may not compatible with your hardware, be careful to using them, repatch in need).
   1. CPU: i5-6300HQ (Skylake,6th)      Mem:  4G DDR3, in one slot
   2. Graphic: Intel HD Graph 530 + Nvida GTX960M
   3. Display: 1920x1080 FHD screen     Disk: 128G SSD + 500G HDD
-### Before Start：
+##### Before Start：
     1. There's something must noticed:
         A. The i7 edition is easy to make Hackintosh
         B. The i5 editon is hard to boot frome UEFI Clover

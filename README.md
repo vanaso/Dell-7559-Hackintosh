@@ -18,7 +18,7 @@ This is a guide for install MacOSX on Dell 7559 Laptop
   Check hardware on the normal running Operation Systme（Windows/linux，etc.）<br>
   List and record hardware details
   #### Download files:
-Get an working Mac OSX and download installer image from Mac app stroe<br>
+Get a working Mac OSX and download installer image from Mac app stroe<br>
 ###### Create bootable USB installer with Clover follow this [thread](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/).<br>
 
 ##### Ensure and format usb disk into GPT disk, operate in terminal:
@@ -59,24 +59,24 @@ Here suggest using [origin installer](https://sourceforge.net/projects/cloverefi
 
 ##### For UEFI boot:<br>
 ###### check all this:<br>
-    Only install UEFI<br>
-     Theme<br><br>
-       BGM<br>
-    install in EFI partition<br>
-     Drivers64UEFI<br>
-       AptioMemoryFix<br>
+    Only install UEFI
+     Theme
+       BGM
+    install in EFI partition
+     Drivers64UEFI
+       AptioMemoryFix
 
 ##### For UEFI and legacy clover boot:<br>
 ###### check all this:<br>
-    Install in EFI partition<br>
-    Theme<br>
-      BGM<br>
-    Bootloader<br>
-      Bios boot0af<br>
-    CloverEFI<br>
-      CloverEFI 64bit BiosBlockIO<br>
-    Drivers64UEFI<br>
-      AptioMemoryFix<br>
+    Install in EFI partition
+    Theme
+      BGM
+    Bootloader
+      Bios boot0af
+    CloverEFI
+      CloverEFI 64bit BiosBlockIO
+    Drivers64UEFI
+      AptioMemoryFix
 
 #### Noticed: as UEFI/legacy clover Boot model suggeste for i5 EDITON.<br>
 After install fiish, replace universal config.plist files frome RehabMan; place must kexts into Clover/Kext/Ohters<br>

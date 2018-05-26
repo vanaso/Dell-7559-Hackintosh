@@ -1,8 +1,3 @@
----
-title: Hackintosh
-date: 2018-05-26 15:18:38
-tags: 黑苹果
----
 ### This is a guide for install MacOSX on Dell 7559 Laptop
 In this guide, all operation take my Dell 7559 as exmaple, APCI files(SSDT and APCI fixed in clover may not compatible with your hardware, be careful to using them, repatch in need).
   1. CPU: i5-6300HQ (Skylake,6th)      Mem:  4G DDR3, in one slot

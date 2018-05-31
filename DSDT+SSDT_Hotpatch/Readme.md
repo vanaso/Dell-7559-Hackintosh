@@ -5,7 +5,7 @@ Necessary ACPI files:
 `SSDT-PNLF` For Backlight control(support OS 12.6+) do not apply brightness fix into DSDT.aml
 `SSDT-UIAC-ALL`   For USB inject(support OS 11.4+)
 
-Patches frome this [GUIDE](https://www.tonymacx86.com/threads/guide-dell-inspiron-15-7559-sierra-high-sierra-install.201576/) :  
+Patches from this [GUIDE](https://www.tonymacx86.com/threads/guide-dell-inspiron-15-7559-sierra-high-sierra-install.201576/) :  
 
 ###### Rename :
     HECI to IMEI

@@ -15,23 +15,25 @@
 				<key>#Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixHPET</key>
-				<true/>
+				<false/>
 				<key>FixIPIC</key>
-				<true/>
+				<false/>
 				<key>FixRTC</key>
-				<true/>
+				<false/>
 				<key>FixTMR</key>
-				<true/>
+				<false/>
 				<key>FixWAK</key>
-				<true/>
+				<false/>
 			</dict>
+			<key>Name</key>
+			<string>DSDT.aml</string>
 			<key>Patches</key>
 			<array>
 				<dict>
 					<key>Comment</key>
 					<string>change _DSM to XDSM</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X0RTTQ==
@@ -45,7 +47,7 @@
 					<key>Comment</key>
 					<string>change HECI to IMEI</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					SEVDSQ==
@@ -59,7 +61,7 @@
 					<key>Comment</key>
 					<string>change _OSI to XOSI, pair with SSDT-XOSI.aml</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X09TSQ==
@@ -87,7 +89,7 @@
 					<key>Comment</key>
 					<string>change HDAS to HDEF, optionally pair with SSDT-HDEF.aml</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					SERBUw==
@@ -101,7 +103,7 @@
 					<key>Comment</key>
 					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					R1BSVwI=
@@ -115,7 +117,7 @@
 					<key>Comment</key>
 					<string>change Method (_BIF &gt; Method (XBIF, pair with SSDT-BATT.aml</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X0JJRg==
@@ -129,7 +131,7 @@
 					<key>Comment</key>
 					<string>change Method (_BST &gt; Method (XBST, pair with SSDT-BATT.aml</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X0JTVA==
@@ -232,7 +234,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>nv_disable=1 dart=0 kext-dev-mode=1 -disablegfxfirmware</string>
+		<string>dart=0 nv_disable=1 kext-dev-mode=1 -disablegfxfirmware brcmfx-country=CN</string>
 		<key>DefaultVolume</key>
 		<string>MacOS</string>
 		<key>HibernationFixup</key>
@@ -686,22 +688,8 @@
 				</data>
 			</dict>
 			<dict>
-				<key>Comment</key>
-				<string>Change VRAM 1536 -&gt; 2048 for 0x191b0006</string>
-				<key>Find</key>
-				<data>
-				AAAABgbAUAAGwFAAAAAAAA==
-				</data>
-				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AAAACAbAUAAGwFAAAAAAAA==
-				</data>
-			</dict>
-			<dict>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				YQLsEA==
@@ -717,7 +705,7 @@
 			</dict>
 			<dict>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				YgLsEA==
@@ -733,7 +721,7 @@
 			</dict>
 			<dict>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				hQjsEA==
@@ -749,7 +737,7 @@
 			</dict>
 			<dict>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				gxnUEQ==
@@ -765,7 +753,7 @@
 			</dict>
 			<dict>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				hBnUEQ==
@@ -906,9 +894,10 @@
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
 		<key>MLB</key>
-		<string></string>
+		<string>C02MVQFQFTCHCRACK</string>
 		<key>ROM</key>
 		<data>
+		lPajWsam
 		</data>
 	</dict>
 	<key>SMBIOS</key>
@@ -924,13 +913,13 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string></string>
+		<string>C02426609OPDM6CCB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
 		<string>1.0</string>
 		<key>ChassisAssetTag</key>
-		<string></string>
+		<string>MacBook-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
@@ -952,7 +941,7 @@
 		<key>ProductName</key>
 		<string>MacBookPro11,1</string>
 		<key>SerialNumber</key>
-		<string></string>
+		<string>C02MX3CVFH00</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>

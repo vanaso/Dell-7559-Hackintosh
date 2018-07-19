@@ -24,7 +24,7 @@ $crackselfs-MBP:~ crackself$ diskutil list
 /dev/disk0 (internal, physical):
 #:       TYPE NAME\                                   SIZE       IDENTIFIER
 0:       GUID_partition_scheme                        *128.0 GB  disk0
->1:                        EFI EFI                    209.7 MB   disk0s
+1:                        EFI EFI                     209.7 MB   disk0s
 2:         Microsoft Reserved                         16.8 MB    disk0s2
 3:       Microsoft Basic Data Windows                 63.8 GB    disk0s3
 4:                  Apple_HFS Mac                     63.3 GB    disk0s4
@@ -80,13 +80,19 @@ Here suggest using [origin installer](https://sourceforge.net/projects/cloverefi
     Drivers64UEFI
       AptioMemoryFix
 
-- Noticed: UEFI & Legacy clover Boot model suggeste for this Laptop with i5 CPU .
+- Noticed: UEFI & Legacy clover Boot model suggeste for this Laptop with i5-6300HQ CPU .
 ##### 6.replace universal config.plist files frome RehabMan,place need kexts into Clover/Kext/Ohters.
 
 Postinstall:
 -
-#### One step need to explain:
-install clover into SSD HDD EFI partiton as well as operate on installer,but check install RCscripts in target partiton, This afect store your backlight leverl.<br>
+#### About save backlight level:
+install clover into SSD HDD EFI partiton as well as operate on installer,but check install RCscripts in target partiton, This afect store your backlight level.<br>
+
+### Need kextx instalation position:
+Due to kextcache reason, some kext cann not work when install in S/L/E. Noticed by RehabMan, you need to install them into L/E<br>
+
+### Before install kexts into final position:
+Do make sure they are the lasted released, compare with RehabMan's.
 
 ##### Others:
 Using my Clover files to test, if your hardware do not work perfect, Repatch your APCI files and check kexts, in additon, RehabMan suggest Kest install into L/E, 'rebuild kextcache' wiht comandline "sudo kextcache -i /".

@@ -43,6 +43,10 @@ For example, `/dev/disk2` is my usb disk.
 diskutil partitionDisk /dev/disk2 1 GPT HFS+J "install_osx" R
 ```
 ##### 3.Write installer inamge into usbdisk
+For Mojave(10.14):
+```bash
+sudo "/Applications/Install macOS Mojave.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --nointeraction
+```
 For Hight Sierra(10.13.x):
 ```bash
 sudo "/Applications/Install macOS High Sierra.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --nointeraction

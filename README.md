@@ -109,3 +109,9 @@ Ethernet<br>
 Keyboard and mouse<br>
 Power Manager(Sleep and wake )<br>
 ....
+
+#### ✳️ New Hackintosh solutions for Hardware working (For Mojave, 3/10/2018)
+###### This part only recording the new progress about hardware working solutions， It may not necessary but important to improve you Hackintosh performance.
+##### Common problems Please read Sniki's [Guide](https://www.tonymacx86.com/threads/readme-common-problems-changes-fixes-on-mojave.255823/)
+##### 1.Graphic: [Intel Framebuffer patching using WhateverGreen](https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/)
+##### 2. Audio: macOS Mojave has removed a lot of Layouts from the AppleHDA.kext

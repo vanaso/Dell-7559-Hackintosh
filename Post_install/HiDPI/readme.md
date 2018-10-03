@@ -1,4 +1,4 @@
-#####This setting profile only for my Dell 7559 FHD screen 16:9.
+#### This setting profile only for my Dell 7559 FHD screen 16:9.
 
 All resolutions from windows:
 ```
@@ -23,7 +23,7 @@ Win origin      Custom add
 1024x768
 800x600
 ```
-####5 better perfomence Hidpi resolutions enabled:
+#### 5 better perfomence Hidpi resolutions enabled:
 ```
 1920x1080   00000F00 00000870 00000001 00200000 
 1690x900    00000D20 00000762 00000001 00200000 

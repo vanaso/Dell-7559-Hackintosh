@@ -114,4 +114,5 @@ Power Manager(Sleep and wake )<br>
 ###### This part only recording the new progress about hardware working solutions， It may not necessary but important to improve you Hackintosh performance.
 ##### Common problems Please read Sniki's [Guide](https://www.tonymacx86.com/threads/readme-common-problems-changes-fixes-on-mojave.255823/)
 ##### 1.Graphic: [Intel Framebuffer patching using WhateverGreen](https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/)
+About HiDPI display read [Guide](https://www.tonymacx86.com/threads/adding-using-hidpi-custom-resolutions.133254/)
 ##### 2. Audio: macOS Mojave has removed a lot of Layouts from the AppleHDA.kext

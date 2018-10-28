@@ -23,15 +23,22 @@ Win origin      Custom add
 1024x768
 800x600
 ```
-#### 5 better perfomence Hidpi resolutions enabled:
+### 5 better perfomence resolutions for Hidpi display:
+you may need RDM.app for select resollution
 ```
-1920x1080   00000F00 00000870 00000001 00200000 
-1690x900    00000D20 00000762 00000001 00200000 
-1680x945    00000B40 00000654 00000001 00200000 
-1440x810    00000C80 00000708 00000001 00200000 
-1366x768    00000AAC 00000600 00000001 00200000 
-1344x756    00000A80 000005E8 00000001 00200000 
+1920x1080   00000F00 00000870 00000001 00200000 ✅
+1680x945    00000B40 00000654 00000001 00200000 ✅
+1600x900    00000D20 00000762 00000001 00200000 ✅
+1440x810    00000C80 00000708 00000001 00200000 ✅
+1366x768    00000AAC 00000600 00000001 00200000 ✅
+1344x756    00000A80 000005E8 00000001 00200000 ✅
 ```
+## Befor apply to system：
+Two method to make Hidpi working: first one is writting custom diskplay profile as `Speciall method`; second is `compatible method` by adding defind screen profile.
+pick up `compatible method` if you don't want spent times， otherwise custom your display profile.
+
+## Speciall method ——  work on 10.13 or bellow:
+using universal display picture
 ```bash
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -70,3 +77,49 @@ Win origin      Custom add
 </plist>
 
 ```
+## compatible method —— work for 10.14:
+using Apple Retina display picture
+(by the way ,this profile is all version support from 10.11, because piont to defind screen profile).
+```ash
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DisplayHasHardwareBrightnessSmoothing</key>
+	<real>1</real>
+	<key>DisplayProductID</key>
+	<integer>1583</integer>
+	<key>DisplayProductName</key>
+	<string>Dell 7559 Colors LED Display</string>
+	<key>DisplayVendorID</key>
+	<integer>2533</integer>
+	<key>scale-resolutions</key>
+	<array>
+		<data>
+		AAAPAAAACHAA
+		</data>
+		<data>
+		AAANIAAAB2IA
+		</data>
+		<data>
+		AAALQAAABlQA
+		</data>
+		<data>
+		AAAMgAAABwgA
+		</data>
+		<data>
+		AAAKrAAABgAA
+		</data>
+		<data>
+		AAAKgAAABegA
+		</data>
+	</array>
+	<key>target-default-ppmm</key>
+	<real>10.151057399999999</real>
+</dict>
+</plist>
+
+```
+⚠️ NOTICED:
+`compatible method` will make the second resolution as default, custom your's as you need.
+`compatible method` origin post in pcbeta.com by @triton21, read [his thread](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1769152&highlight=edid) for more details.

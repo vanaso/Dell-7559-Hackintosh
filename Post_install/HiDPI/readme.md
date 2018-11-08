@@ -33,11 +33,59 @@ you may need RDM.app for select resollution
 1366x768    00000AAC 00000600 00000001 00200000 ✅
 1344x756    00000A80 000005E8 00000001 00200000 ✅
 ```
-## Befor apply to system：
+## Befor apply to system：
 Two method to make Hidpi working: first one is writting custom diskplay profile as `Speciall method`; second is `compatible method` by adding defind screen profile.
-pick up `compatible method` if you don't want spent times， otherwise custom your display profile.
+pick up `compatible method` if you don't want spent times，otherwise custom your display profile.
 
-## Speciall method ——  work on 10.13 or bellow:
+Lookup `DisplayVerdorID` and `DisplayProductID` in IORegistryExplorer by searching `"display"`.
+Take my example, DisplayVendorID is `0x9e5`, DisplayProductID is `0x62f`
+create custome Overrides files for your diskpaly in `/System/Library/Displays/Contents/Resources/Overrides/`:
+```
+sudo mkdir DisplayVendorID-9e5 && cd DisplayVendorID-9e5 && sudo nano DisplayProductID-62f
+```
+input bellow and save before reboot to enable Hidpi.You may want to apply wanted Resolution by RDM.app.
+
+## Speciall method ——  work on 10.14:
+using universal display picture
+```bash
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DisplayHasHardwareBrightnessSmoothing</key>
+	<real>1</real>
+	<key>DisplayProductID</key>
+	<integer>1583</integer>
+	<key>DisplayProductName</key>
+	<string>Dell 7559 Colors LED Display</string>
+	<key>DisplayVendorID</key>
+	<integer>2533</integer>
+	<key>scale-resolutions</key>
+	<array>
+		<data>
+		AAAPAAAACHAAAAAJAKAAAA==
+		</data>
+		<data>
+		AAANIAAAB2IAAAAJAKAAAA==
+		</data>
+		<data>
+		AAALQAAABlQAAAAJAKAAAA==
+		</data>
+		<data>
+		AAAMgAAABwgAAAAJAKAAAA==
+		</data>
+		<data>
+		AAAKrAAABgAAAAAJAKAAAA==
+		</data>
+		<data>
+		AAAKgAAABegAAAAJAKAAAA==
+		</data>
+	</array>
+</dict>
+</plist>
+
+```
+## Speciall method ——  work on 10.12:
 using universal display picture
 ```bash
 <?xml version="1.0" encoding="UTF-8"?>
@@ -77,7 +125,8 @@ using universal display picture
 </plist>
 
 ```
-## compatible method —— work for 10.14:
+
+### compatible method —— work all 10.12-10.14 :
 using Apple Retina display picture
 (by the way ,this profile is all version support from 10.11, because piont to defind screen profile).
 ```ash
@@ -120,6 +169,6 @@ using Apple Retina display picture
 </plist>
 
 ```
-⚠️ NOTICED:
+⚠️ NOTICED:
 `compatible method` will make the second resolution as default, custom your's as you need.
 `compatible method` origin post in pcbeta.com by @triton21, read [his thread](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1769152&highlight=edid) for more details.

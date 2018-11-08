@@ -110,7 +110,7 @@ Keyboard and mouse<br>
 Power Manager(Sleep and wake )<br>
 ....
 
-## ⚠️ Important update info ( For Mojave, 27/10/2018 )
+## ⚠️ Important update info ( For Mojave, 27/10/2018 )
   OSX removed some audio layout support, do update to lasted release [AppleALC](https://github.com/acidanthera/AppleALC) + [Lilu](https://github.com/acidanthera/Lilu) to fix audio.
     
   My Dell 7559 i5 6300HQ using Realtek ALC 256 audio codec, change inject layout id, here default `layout=13`.
@@ -121,7 +121,7 @@ Power Manager(Sleep and wake )<br>
   To fix black screen when install Mojave, Clover config.plist need inject intel Graphic, 
   `Graphics\Inject\Intel` changed `YES`
 
-#### ✳️ New Hackintosh solutions for Hardware working (For Mojave, 3/10/2018)
+#### ✳️ New Hackintosh solutions for Hardware working (For Mojave, 3/10/2018)
 ##### This part only recording the new progress about hardware working solutions， It may not necessary but important to improve you Hackintosh performance.
 ##### Common problems Please read Sniki's [Guide](https://www.tonymacx86.com/threads/readme-common-problems-changes-fixes-on-mojave.255823/)
 ##### 1.Graphic: [Intel Framebuffer patching using WhateverGreen](https://www.tonymacx86.com/threads/guide-intel-framebuffer-patching-using-whatevergreen.256490/)

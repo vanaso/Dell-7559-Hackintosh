@@ -45,7 +45,7 @@ sudo mkdir DisplayVendorID-9e5 && cd DisplayVendorID-9e5 && sudo nano DisplayPro
 ```
 input bellow and save before reboot to enable Hidpi.You may want to apply wanted Resolution by RDM.app.
 
-## Speciall method ——  work on 10.14:
+## Custom method ——  work on 10.14:
 using universal display picture
 ```bash
 <?xml version="1.0" encoding="UTF-8"?>
@@ -83,9 +83,8 @@ using universal display picture
 	</array>
 </dict>
 </plist>
-
 ```
-## Speciall method ——  work on 10.12:
+## Custom method ——  work on 10.13:
 using universal display picture
 ```bash
 <?xml version="1.0" encoding="UTF-8"?>
@@ -123,9 +122,46 @@ using universal display picture
 	</array>
 </dict>
 </plist>
-
 ```
-
+## Custom method ——  work on 10.13:
+using universal display picture
+```bash
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DisplayHasHardwareBrightnessSmoothing</key>
+	<real>1</real>
+	<key>DisplayProductID</key>
+	<integer>1583</integer>
+	<key>DisplayProductName</key>
+	<string>Dell 7559 Colors LED Display</string>
+	<key>DisplayVendorID</key>
+	<integer>2533</integer>
+	<key>scale-resolutions</key>
+	<array>
+		<data>
+		AAAPAAAACHAAAAABACAAAA==
+		</data>
+		<data>
+		AAANIAAAB2IAAAABACAAAA==
+		</data>
+		<data>
+		AAALQAAABlQAAAABACAAAA==
+		</data>
+		<data>
+		AAAMgAAABwgAAAABACAAAA==
+		</data>
+		<data>
+		AAAKrAAABgAAAAABACAAAA==
+		</data>
+		<data>
+		AAAKgAAABegAAAABACAAAA==
+		</data>
+	</array>
+</dict>
+</plist>
+```
 ### compatible method —— work all 10.12-10.14 :
 using Apple Retina display picture
 (by the way ,this profile is all version support from 10.11, because piont to defind screen profile).
@@ -171,4 +207,4 @@ using Apple Retina display picture
 ```
 ⚠️ NOTICED:
 `compatible method` will make the second resolution as default, custom your's as you need.
-`compatible method` origin post in pcbeta.com by @triton21, read [his thread](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1769152&highlight=edid) for more details.
+`compatible method` origin post in pcbeta.com by @triton21, read [his thread](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1769152&highlight=edid) for more details.

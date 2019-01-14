@@ -1,13 +1,25 @@
 ## Here explain all neccessary drivers for the hardware on this Hackintosh
     specially, the wifi & bluetooth card is DW1560(Broadcom 94352Z), make adjustment when your card different
-ALL NECCESSARY DRIVERS MUST INSTALL INTO **/Library/Extensions**
+kexts mark ✅ require install into **/Library/Extensions** and rebuild cache.
+
 Broadcom Bluetooth driver:
 --
-DW1560: **BrcmFirmwareRepo.kext、BrcmPatchRAM2.kext**
+✅**BrcmFirmwareRepo.kext、BrcmPatchRAM2.kext**
+
+Broadcom Wi-Fi driver:
+--
+*AirportBrcmFixup.kext、FakePCIID_Broadcom_WiFi.kext、FakePCIID.kext*
 
 Audio combo-jack driver：
 --
-**CodecCommander.kext**
+✅**CodecCommander.kext** 
+  
+AppleALC.kext、Lilu.kext
+⚠️*FakePCIID_Intel_HDMI_Audio.kext only need when using BIOS V1.0.1*
+
+RealtekWlan：
+--
+*RealtekRTL8111.kext*
 
 Do Rebuild kextcacke:
 --

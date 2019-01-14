@@ -141,6 +141,8 @@ Audio combo-jack driver：
 ✅**CodecCommander.kext** 
   
 AppleALC.kext、Lilu.kext
+  
+  
 ⚠️*FakePCIID_Intel_HDMI_Audio.kext only need when using BIOS V1.0.1*
 
 RealtekWlan：

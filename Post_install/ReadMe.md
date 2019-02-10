@@ -15,7 +15,12 @@ Audio combo-jack driver：
 ✅**CodecCommander.kext** 
   
 AppleALC.kext、Lilu.kext
-⚠️*FakePCIID_Intel_HDMI_Audio.kext only need when using BIOS V1.0.1*
+⚠️*FakePCIID_Intel_HDMI_Audio.kext only make sense when using BIOS V1.0.1*
+
+Graphic video play about：
+-- 
+✅**IntelGraphicsFixup.kext**  
+fixed web video crash via safari , whatevergreen make no sense to replace
 
 RealtekWlan：
 --

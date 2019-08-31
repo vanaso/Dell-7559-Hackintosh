@@ -1,4 +1,4 @@
-## 2018-8-31 update:
+## 2019-8-31 update:
 ### smothly work on 10.14.6 (18G84)
 
 ### This is a guide for install MacOSX on Dell 7559 Laptop

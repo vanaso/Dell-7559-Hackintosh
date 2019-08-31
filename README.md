@@ -1,3 +1,6 @@
+## 2018-8-31 update:
+### smothly work on 10.14.6 (18G84)
+
 ### This is a guide for install MacOSX on Dell 7559 Laptop
 In this guide, all operation take my Dell 7559 as exmaple, APCI files(SSDT and APCI fixed in clover may not compatible with your hardware, be careful to using them, repatch in need).
   1. CPU: i5-6300HQ (Skylake,6th)      Mem:  4G DDR3, in one slot

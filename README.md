@@ -1,5 +1,6 @@
-## 2019-8-31 update:
+## 2019-9-1 update:
 ### smothly work on 10.14.6 (18G84)
+may need update your necessary kext drivers
 
 ### This is a guide for install MacOSX on Dell 7559 Laptop
 In this guide, all operation take my Dell 7559 as exmaple, APCI files(SSDT and APCI fixed in clover may not compatible with your hardware, be careful to using them, repatch in need).

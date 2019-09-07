@@ -1,3 +1,4 @@
+# This branch base on Hotpatched, support OS X from 10.12(tested on dell 7559)
 ## 2019-9-1 update:
 ### smothly work on 10.14.6 (18G84)
 may need update your necessary kext drivers

@@ -1,4 +1,9 @@
-# This branch base on Hotpatched, support OS X from 10.12(tested on dell 7559)
+# This branch base on Hotpatched, support OS X from 10.11.6(tested on dell 7559)
+
+##2019-9-11 update:
+## whatever green destroy 10.11.6 display（blank screen,replace by FakePCIID_Intel_HD_Graphics.kext）
+FakePCIID_Broadcom_WiFi.kext necessary for handoff
+Mac OS X 10.14.6 handoff work,by setting account on instalation login screen
 ## 2019-9-1 update:
 ### smothly work on 10.14.6 (18G84)
 may need update your necessary kext drivers
